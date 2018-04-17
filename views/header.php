@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv=X-UA-Compatible>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name=viewport>
     <meta content="Description" name=description>
-    <title>Allowance</title>
+    <title>Hakushi • PHP Boilerplate</title>
     <base href="<?php echo $baseurl; ?>" />
     
     <!--bootstrap CDN-->
@@ -23,11 +23,11 @@
     <!--[if lt IE 9]> <script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script> <script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script> <![endif]-->
     
     <!--icons-->
-    <link rel="apple-touch-icon" href="assets/images/allowance-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/hakushi-icon.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-startup-image" href="assets/images/allowance-launch.png">
+    <link rel="apple-touch-startup-image" href="assets/images/hakushi-launch.png">
     <!--<link href="/favicon.ico" rel="icon">-->
 </head>
 
-<body class="allowance">
+<body class="hakushi">

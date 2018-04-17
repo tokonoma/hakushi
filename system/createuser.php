@@ -5,8 +5,8 @@ try{
     $db = new PDO($dsn);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $input_email = $_POST['newuseremail'];
-    $input_password = $_POST['newuserpassword'];
+    $input_email = $_POST['newemail'];
+    $input_password = $_POST['newpassword'];
     $password_store = password_hash($input_password, PASSWORD_BCRYPT);
     $input_fname = $_POST['newuserfirstname'];
     $input_lname = $_POST['newuserlastname'];

@@ -124,22 +124,9 @@ input:-webkit-autofill{
 
 
 /*BOOTSTRAP*/
-.inline{
-	display: inline-block;
-}
-
 .header-margin{
 	margin-bottom: 24px;
 }
-
-/*.allowance .navbar-default{
-	background: transparent;
-}
-
-.allowance .navbar{
-	border: none;
-	border-bottom: 1px solid #e7e7e7;
-}*/
 
 .dropdown-menu>li.no-a-tag{
     display: block;
@@ -156,7 +143,7 @@ input:-webkit-autofill{
 	color: #303D44;
 }
 
-.allowance .navbar-default{
+.hakushi .navbar-default{
 	background: transparent;
 }
 

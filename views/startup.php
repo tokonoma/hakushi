@@ -2,23 +2,23 @@
 
 <div class="container height100">
     <div class="row height100">
-        <div class="col-sm-4 col-sm-offset-4 height100">
+        <div class="col-sm-4 offset-sm-4 height100">
             <div class="table-parent height80"><div class="table-cell table-cell-vcenter">
                 
                 <?php include('views/alerts.php');?>
                 
                 <h3>Let's Get started</h3>
-                <h4>Create an admin user</h4>
-                <div class="panel panel-default">
-                    <div class="panel-body">
+                <h5>Create an admin user</h5>
+                <div class="card">
+                    <div class="card-body">
                         <form id="js-submit-form" method="POST" action="<?php echo $baseurl; ?>">
                             <div class="form-group">
-                                <label for="newuseremail">Email address</label>
-                                <input type="email" name="newuseremail" class="form-control" id="newemail" placeholder="Email">
+                                <label for="newemail">Email address</label>
+                                <input type="email" name="newemail" class="form-control" id="newemail" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <label for="newuserpassword">Password</label>
-                                <input type="password" name="newuserpassword" class="form-control" id="newuserpassword" placeholder="Password">
+                                <label for="newpassword">Password</label>
+                                <input type="password" name="newpassword" class="form-control" id="newpassword" placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <label for="passwordconfirm">Confirm Password</label>
@@ -46,30 +46,4 @@
 </div> <!--/container-->
 
 <?php include('views/commonjs.php');?>
-
-<script>
-    $(function() {
-        $("#js-pw-check").click(function() {
-            if($('input[name=newuserpassword]').val() == $('input[name=passwordconfirm]').val()){
-                submitJSForm();
-            }
-            else{
-                $('#passwordconfirm').css('border-color', '#AA4444');
-                $('#passwordconfirm').css('background-color', '#FCD6D6');
-                $(document).scrollTop($("#passwordconfirm").offset().top); 
-            }
-        });
-        //also prompt with error if you unfocus with mismatching passswords
-        $('#passwordconfirm').blur(function(){
-            if($('input[name=newuserpassword]').val() == $('input[name=passwordconfirm]').val()){
-                $('#passwordconfirm').removeAttr( 'style');
-            }
-            else{
-                $('#passwordconfirm').css('border-color', '#AA4444');
-                $('#passwordconfirm').css('background-color', '#FCD6D6');
-            }
-        });
-    });
-</script>
-
 <?php include('views/ender.php');?>

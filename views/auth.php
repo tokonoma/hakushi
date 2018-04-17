@@ -2,14 +2,14 @@
 
 <div class="container height100">
     <div class="row height100">
-        <div class="col-sm-4 col-sm-offset-4 height100">
+        <div class="col-sm-4 offset-sm-4 height100">
             <div class="table-parent height80"><div class="table-cell table-cell-vcenter">
                 
                 <?php include('views/alerts.php');?>
                 
                 <h3>Sign In</h3>
-                <div class="panel panel-default">
-                    <div class="panel-body">
+                <div class="card">
+                    <div class="card-body">
 
                         <form id="login-form" method="POST" action="<?php echo $baseurl; ?>">
                             <div class="form-group">

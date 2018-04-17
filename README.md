@@ -1,14 +1,14 @@
-# Allowance
+# Hakushi • 白紙
 
-Simple PHP budgeting app. Allows users to create budgets, track spending, and share balances with other users. Budgets support scheduled auto-refills at either monthly or weekly intervals.
+Simple PHP webapp boilerplate with basic routing, sqlite database, user table, and 
 
 ## Getting Started
 
-Currently the only way to get this working is to either **clone the repo** or **download as a zip**. Once the files are acquired, you should be able to simply drop these files onto a server with PHP using FTP.
+**clone the repo** or **download as a zip**. Once the files are acquired, drop these files onto a server with PHP.
 
 ### Running Locally
 
-The only thing you should need to do to get this running locally is make sure the base URL works for your setup and that the DB path is getting generated properly. You might need to experiment a bit to get this right, but this is how I got it working with MAMP. 
+To get this running locally, you need to make sure the base URL works for your setup and that the DB path is getting generated properly. You might need to experiment a bit to get this right, but this is how I got it working with MAMP. 
 
 **If you clone this directly into your local servers main directory, there's a good chance you won't need to change anything**
 
@@ -26,7 +26,7 @@ else{
 }
 ```
 
-Inside my MAMP "HTDOCS" folder, I have a directory called "allowance" - I need to add this to folder name manually to my path so that PHP can consistently find my DB and generate other base URLS.
+Inside my MAMP "HTDOCS" folder, I have a directory called "hakushi" - I need to add this to folder name manually to my path so that PHP can consistently find my DB and generate other base URLS.
 
 ### Sqlite
 
@@ -62,7 +62,7 @@ $lastuid = $db->lastInsertId();
 $lastuid = $db->lastInsertId(content_uid_seq);
 ```
 
-Making these changes, plus properly accessing your postgres DB for local and prod  should have you covered.
+Making these changes, plus properly accessing your postgres DB for local and prod should have you covered.
 
 ## Creating Users
 
