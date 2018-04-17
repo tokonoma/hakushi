@@ -1,5 +1,6 @@
 $(function() {
 
+    //prevents links in standalone webapp from opening normal safari
     if(("standalone" in window.navigator) && window.navigator.standalone){
         var noddy, remotes = false;
         document.addEventListener('click', function(event){
