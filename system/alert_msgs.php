@@ -20,30 +20,6 @@
                 $statusMessage = "Success!";
                 $statusType = "success";
                 break;
-            case "budgetcreated":
-                $statusMessage = "New Budget Created!";
-                $statusType = "success";
-                break;
-            case "itemedited":
-                $statusMessage = ucfirst($alertnoun)." edited";
-                $statusType = "success";
-                break;
-            case "itemcreated":
-                $statusMessage = ucfirst($alertnoun)." created";
-                $statusType = "success";
-                break;
-            case "itemdeleted":
-                $statusMessage = ucfirst($alertnoun)." deleted";
-                $statusType = "danger";
-                break;
-            case "pagesaved":
-                $statusMessage = "Page saved";
-                $statusType = "success";
-                break;
-            case "loginfail":
-                $statusMessage = "Login failed - please check your credentials";
-                $statusType = "danger";
-                break;
             case "generalerror":
                 $statusMessage = "Something went wrong...";
                 $statusType = "danger";

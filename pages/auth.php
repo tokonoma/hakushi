@@ -1,11 +1,11 @@
-<?php include('views/header.php');?>
+<?php include('../views/header.php');?>
 
 <div class="container height100">
     <div class="row height100">
         <div class="col-sm-4 offset-sm-4 height100">
             <div class="table-parent height80"><div class="table-cell table-cell-vcenter">
                 
-                <?php include('views/alerts.php');?>
+                <?php include('../views/alerts.php');?>
                 
                 <h3>Sign In</h3>
                 <div class="card">
@@ -33,6 +33,6 @@
     </div> <!--/row-->
 </div> <!--/container-->
 
-<?php include('views/commonjs.php');?>
+<?php include('../views/commonjs.php');?>
 
-<?php include('views/ender.php');?>
+<?php include('../views/ender.php');?>

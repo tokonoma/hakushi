@@ -13,7 +13,7 @@ try{
     //if the form is submitted
     if(isset($_POST['user-email'])){
 
-        //before doing anything, make sure nothing it blank
+        //before doing anything, make sure nothing is blank
         $required = array('user-email', 'first-name', 'last-name');
 
         foreach($required as $field) {

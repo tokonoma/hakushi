@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('America/New_York');
-session_name('allowance');
+session_name('hakushi');
 session_start();
 
 // Extend cookie life time by an amount of your liking
@@ -9,8 +9,6 @@ setcookie(session_name(),session_id(),time()+$cookieLifetime);
 
 //system includes
 include('system/db_connect.php');
-
-//looking for baseurl definition? it's in db_connect.php
 
 //include alerts logic and messages
 include('system/alert_msgs.php');
@@ -119,34 +117,32 @@ if(!isset($_SESSION['email'])){
     if($numberofusers < 1){
         //first time
         $_SESSION['firstuser'] = true;
-        include('views/startup.php');
+        include('pages/startup.php');
     }
     else{
-        include('views/auth.php');
+        include('pages/auth.php');
     }
 }
 else{
-    //yes - lets get you where you need to go
     $_SESSION['expire'] = time()+60*360; //reset session expire everytime the user uses the site
-    //is mode = list or is nothing set at all? go to list view.
-    if(isset($_GET['budget'])){
-        include('views/dashboard.php');
-    }
-    elseif(isset($_GET['mode'])){ 
-        $mode = $_GET['mode'];
-        switch ($mode){
-            case 'settings':
-                include('views/user_settings.php');
-                break;
-            case '404':
-                include('views/404.php');
-                break;
+
+    if(count($_GET)) {
+        if(isset($_GET['mode'])){ 
+            $mode = $_GET['mode'];
+            switch ($mode){
+                case 'settings':
+                    include('pages/user_settings.php');
+                    break;
+                default:
+                    include('pages/404.php');
+                    break;
+            }
+        }
+        else{
+            include('pages/404.php');
         }
     }
-    elseif(isset($_GET['404'])){
-        include('views/404.php');
-    }
     else{
-        include('views/budgets_dashboard.php');
+        include('pages/landing.php');
     }
 }
