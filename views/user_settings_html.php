@@ -20,7 +20,7 @@
                     <div class="navbar-header pull-right">
                         <ul class="nav navbar-nav navbar-right navbar-right-button-end">
                             <li>
-                                <button type="button" class="btn allw-success navbar-btn save-settings-btn">
+                                <button type="button" class="btn allw-success navbar-btn js-submit-btn">
                                     Save Changes
                                 </button>
                             </li>
@@ -30,7 +30,7 @@
             </nav>
 
             <!-- using REQUEST_URI routes straight back to settings for processing -->
-            <form id="settings-form" method="POST" action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>">
+            <form id="js-submit-form" method="POST" action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>">
                 <?php foreach($results as $user): ?>
                     <div class="form-group">
                         <label for="user-email">Email</label>

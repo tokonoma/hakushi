@@ -8,7 +8,7 @@
 
 <!--custom JS-->
 <script src="assets/js/sortable.js"></script>
-<script src="assets/js/allowance.js"></script>
+<script src="assets/js/hakushi.js"></script>
 <script src="assets/js/links.js"></script>
 
 <!--what even is this-->

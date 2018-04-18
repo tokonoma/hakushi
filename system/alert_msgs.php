@@ -87,13 +87,5 @@
                 $statusMessage = "You have been logged out";
                 $statusType = "info";
                 break;
-            case "cms":
-                $statusMessage = "You do not have access to Marian CMS";
-                $statusType = "danger";
-                break;
-            case "admin":
-                $statusMessage = "You do not have access to Marian Admin";
-                $statusType = "danger";
-                break;
         }
     }
