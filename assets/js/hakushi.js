@@ -1,11 +1,11 @@
-$(function() {
+$(function(){
     //class on click example
     //$(document).on("click", ".my-class", function(){
         //do something
     //});
 
     //click to call js submit for single/generic form
-    $(".js-submit-btn").click(function() {
+    $(document).on("click", ".js-submit-btn", function(){
         submitJSForm();
     });
 

@@ -33,6 +33,11 @@
     </div> <!--/row-->
 </div> <!--/container-->
 
+
+<!--BOTTOM-->
+
+<?php include('views/footer.php'); ?>
+
 <?php include('views/commonjs.php');?>
 
 <?php include('views/ender.php');?>

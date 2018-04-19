@@ -1,44 +1,40 @@
-<nav class="navbar navbar-default navbar-static-top">
+<!-- change navbar-expand-sm to control when hamburger gets triggered -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<?php echo $baseurl; ?>">
-                白紙
-            </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <!--<li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>-->
-            </ul>
-            <ul class="nav navbar-nav navbar-right navbar-right-button-end">
-                <li>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle navbar-btn link-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hi <?php if(!empty($_SESSION['firstname'])): ?> <?php echo $_SESSION['firstname'] ?> <?php else: ?> There <?php endif ?> <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo $baseurl; ?>?mode=settings">Settings</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li>
-                                
-                                <form id="login-form" method="POST" action="<?php echo $baseurl; ?>">
-                                    <input type="hidden" name="action" value="logout">
-                                    <button type="submit" name="submit" class="btn btn-link">
-                                        Logout
-                                    </button>
-                                </form> 
+        <a class="navbar-brand" href="<?php echo $baseurl; ?>">白紙</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                            </li>
-                        </ul>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+            <!--
+            example of standard navbar links
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hi <?php if(!empty($_SESSION['firstname'])): ?> <?php echo $_SESSION['firstname'] ?> <?php else: ?> There <?php endif ?> 
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profiledropdown">
+                        <a class="dropdown-item" href="<?php echo $baseurl; ?>?mode=settings">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <form id="login-form" method="POST" action="<?php echo $baseurl; ?>">
+                            <input type="hidden" name="action" value="logout">
+                            <button type="submit" name="submit" class="btn btn-link">
+                                Logout
+                            </button>
+                        </form>
                     </div>
                 </li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>

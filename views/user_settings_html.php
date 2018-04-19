@@ -1,37 +1,25 @@
-<div class="container">
+<div class="container mt-4">
     <div class="row">
 
         <?php include('views/alerts.php');?>
 
-        <div class="col-sm-4 text-center hidden-xs">
-            <i class="fa fa-user-circle-o profile-icon" aria-hidden="true"></i>
-        </div>
+        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
 
-        <div class="col-sm-8">
-
-            <!-- HEADER BAR -->
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header pull-left">
-                        <span class="navbar-brand">
-                            User Settings
-                        </span>
-                    </div>
-                    <div class="navbar-header pull-right">
-                        <ul class="nav navbar-nav navbar-right navbar-right-button-end">
-                            <li>
-                                <button type="button" class="btn allw-success navbar-btn js-submit-btn">
-                                    Save Changes
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                <a class="navbar-brand" href="#">User Settings</a>
+                <button type="button" class="btn btn-primary js-submit-btn ml-auto">
+                    Save Changes
+                </button>
             </nav>
 
             <!-- using REQUEST_URI routes straight back to settings for processing -->
-            <form id="js-submit-form" method="POST" action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>">
+            <form id="js-submit-form" class="mt-3" method="POST" action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>">
                 <?php foreach($results as $user): ?>
+
+                    <div class="text-center mb-4 profile-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+
                     <div class="form-group">
                         <label for="user-email">Email</label>
                         <input type="text" class="form-control" id="user-email" name="user-email" placeholder="email" autocomplete='off' value="<?php echo $user['email']; ?>">
@@ -44,7 +32,6 @@
                         <label for="last-name">Last Name</label>
                         <input type="text" class="form-control" id="last-name" name="last-name" placeholder="title" autocomplete='off' value="<?php echo $user['lname']; ?>">
                     </div>
-                    <hr>
                     <div class="checkbox">
                         <label>
                             <?php if($user['stayloggedin'] == 1): ?>
@@ -54,7 +41,7 @@
                             <?php endif; ?>
                         </label>
                     </div>
-                    <hr>
+                    <hr class="my-5">
                     <div class="form-group">
                         <label for="password-one">Change Password</label>
                         <input type="password" class="form-control" id="password-one" name="password-one" placeholder="Enter new password" autocomplete='off' value="">
