@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php echo $baseurl; ?>">
-                ALLOWANCE
+                白紙
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -26,6 +26,7 @@
                             <li><a href="<?php echo $baseurl; ?>?mode=settings">Settings</a></li>
                             <li role="separator" class="divider"></li>
                             <li>
+                                
                                 <form id="login-form" method="POST" action="<?php echo $baseurl; ?>">
                                     <input type="hidden" name="action" value="logout">
                                     <button type="submit" name="submit" class="btn btn-link">

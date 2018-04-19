@@ -1,6 +1,6 @@
-<?php include('../views/header.php');?>
+<?php include('views/header.php');?>
 
-<?php include('../views/nav.php'); ?>
+<?php include('views/nav.php'); ?>
 
 <div class="container">
     <div class="row">
@@ -14,4 +14,4 @@
 
 <!--BOTTOM-->
 
-<?php include('../views/ender.php'); ?>
+<?php include('views/ender.php'); ?>

@@ -3,9 +3,8 @@
     //alerts and notifications
     $statusMessage = "";
     $statusType = "";
-    $alertnoun = "";
-    
-    //define the noun for alerts if available
+  
+  //define the noun for alerts if available
     if (isset($_SESSION['sessionnoun'])){
         $alertnoun = $_SESSION['sessionnoun'];
     }
@@ -51,7 +50,6 @@
         }
         unset($_SESSION['sessionalert']);
     }
-
 
     //_GET alerts
     if (isset($_GET['alert'])){
