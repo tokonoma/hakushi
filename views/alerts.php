@@ -1,6 +1,6 @@
 <?php
     if (!empty($statusMessage)){
-        echo "<div id='' class='alert alert-" . $statusType . " notif-alert' role='alert'>";
+        echo "<div id='system-alert' class='alert alert-" . $statusType . "' role='alert'>";
         echo $statusMessage;
         echo "</div>";
     }

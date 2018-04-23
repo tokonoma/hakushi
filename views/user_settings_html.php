@@ -1,9 +1,9 @@
 <div class="container mt-4">
     <div class="row">
 
-        <?php include('views/alerts.php');?>
-
         <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+
+            <?php include('views/alerts.php');?>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
                 <a class="navbar-brand" href="#">User Settings</a>
@@ -13,7 +13,7 @@
             </nav>
 
             <!-- using REQUEST_URI routes straight back to settings for processing -->
-            <form id="js-submit-form" class="mt-3" method="POST" action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>">
+            <form id="js-submit-form" class="mt-3" method="POST" action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" autocomplete="false">
                 <?php foreach($results as $user): ?>
 
                     <div class="text-center mb-4 profile-image">

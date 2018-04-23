@@ -4,6 +4,12 @@ $(function(){
         //do something
     //});
 
+    //hide alerts
+    // $("#system-alert").slideUp("slow");
+    setTimeout(function(){
+        $("#system-alert").slideUp("slow");
+    }, 1800);
+
     //click to call js submit for single/generic form
     $(document).on("click", ".js-submit-btn", function(){
         submitJSForm();

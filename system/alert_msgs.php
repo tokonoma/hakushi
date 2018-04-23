@@ -23,6 +23,14 @@
                 $statusMessage = "Something went wrong...";
                 $statusType = "danger";
                 break;
+
+            /*login*/
+            case "loginfail":
+                $statusMessage = "Incorrect username or password";
+                $statusType = "danger";
+                break;
+
+            /*settings and form alerts*/
             case "missingfield":
                 $statusMessage = "Looks like you left a field empty - try again!";
                 $statusType = "danger";
@@ -43,6 +51,8 @@
                 $statusMessage = "This email address already has an account";
                 $statusType = "danger";
                 break;
+
+            /*first user creation*/
             case "usercreated":
                 $statusMessage = "New user successfully created";
                 $statusType = "success";
