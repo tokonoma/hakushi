@@ -66,7 +66,7 @@ input:-webkit-autofill{
 	line-height: 60px;
 }
 
-.body .container:last-of-type{
+body > .container:last-of-type{
 	margin-bottom: 100px;
 }
 

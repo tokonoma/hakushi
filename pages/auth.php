@@ -1,9 +1,8 @@
 <?php include('views/header.php');?>
 
-<div class="container height100">
-    <div class="row height100">
-        <div class="col-sm-4 offset-sm-4 height100">
-            <div class="table-parent height80"><div class="table-cell table-cell-vcenter">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 offset-sm-4 mt-5">
                 
                 <?php include('views/alerts.php');?>
                 
@@ -28,7 +27,6 @@
 
                     </div>
                 </div> <!--/panel-->
-            </div></div> <!--/tables-->
         </div> <!--/col-->
     </div> <!--/row-->
 </div> <!--/container-->
