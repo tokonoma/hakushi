@@ -72,9 +72,6 @@ if(isset($_POST['action'])){
             header("Location: ".$baseurl."?alert=logout");
             exit();
             break;
-        case 'save':
-            //save procedure
-            break;
         case 'createuser':
             //an attempt at added security admin user or first user
             if(!empty($_SESSION['admin']) || !empty($_SESSION['firstuser'])){
